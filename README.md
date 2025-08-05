@@ -1,2 +1,2 @@
 # Dynamic-Portfolio
-My Digital Portfolio
+My Digital Portfolio & Resume
