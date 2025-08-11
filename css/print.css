@@ -1,0 +1,220 @@
+/* css/print.css */
+
+/* ========================================= */
+/* Print-Specific Stylesheet                 */
+/* Applied only when the document is printed */
+/* ========================================= */
+
+/* @page rule: Defines page box for printed output */
+@page {
+    margin: 1.5cm; /* Standard print margins (top, right, bottom, left) */
+    /* You can also define @top-left, @bottom-right etc. for headers/footers */
+}
+
+/* Base Body Styles for Print */
+body {
+    font-family: 'Inter', sans-serif; /* Ensure a readable sans-serif font */
+    font-size: 11pt; /* Optimal font size for print readability */
+    line-height: 1.4;
+    color: #000 !important; /* Force black text for maximum contrast on paper */
+    background: none !important; /* Remove any background images or colors */
+    -webkit-print-color-adjust: exact; /* Important for preserving background colors if desired (use with caution) */
+    print-color-adjust: exact;
+}
+
+/* Hide elements that are not useful or desirable for a printed resume */
+.main-nav, /* Navigation menu */
+.contact-form, /* Interactive contact form */
+.site-footer .footer-links, /* Social media icons in footer */
+.timeline-toggle, /* The hidden checkbox for timeline interactivity */
+.timeline-label,  /* The 'Show Details' label for timeline */
+.portfolio-link .item-overlay, /* The interactive overlay on portfolio items */
+.portfolio-modal, /* The entire lightbox modal */
+.submit-button, /* The form submission button */
+.profile-pic, /* Profile picture can be removed to save space/ink */
+/* Remove decorative pseudo-elements if they interfere with print */
+.content-block::before, .content-block::after,
+.hero-section::before, .hero-section::after,
+.skill-category h3::after, /* Hide the accent underline under skill categories */
+.contact-info i /* Hide icons in contact info for a cleaner look */
+ {
+    display: none !important; /* Use !important to strongly override display properties */
+    visibility: hidden !important; /* Also hide from accessibility tree if still rendered */
+    opacity: 0 !important; /* Ensure no residual rendering */
+    height: 0 !important; /* Collapse space occupied */
+    margin: 0 !important; /* Remove any margins */
+    padding: 0 !important; /* Remove any padding */
+}
+
+/* Force display of previously hidden content that is essential for print */
+.timeline-details {
+    max-height: none !important; /* Allow content to fully expand */
+    overflow: visible !important; /* Ensure all text is visible */
+    opacity: 1 !important; /* Ensure it's fully visible */
+    transition: none !important; /* Disable any transitions that might delay rendering */
+    border-left: 1px solid #CCC !important; /* Simpler, visible border for print */
+    padding-left: 1rem !important;
+    margin-top: 0.5rem !important;
+}
+.timeline-details ul {
+    list-style: disc !important; /* Explicitly show bullet points */
+    padding-left: 1.5rem !important;
+}
+.timeline-details li {
+    margin-bottom: 0.3em !important;
+}
+
+
+/* General Typography Adjustments for Print */
+h1, h2, h3, h4, h5, h6 {
+    color: #333 !important; /* Dark gray for headings for good contrast */
+    page-break-after: avoid; /* Prevent page breaks immediately after a heading */
+    margin-top: 1.5em !important;
+    margin-bottom: 0.8em !important;
+}
+
+h1 {
+    font-size: 24pt !important;
+    text-align: left !important; /* Align left for print layout */
+    margin-bottom: 0.2em !important;
+}
+h2 {
+    font-size: 18pt !important;
+    border-bottom: 1px solid #CCC; /* Subtle line under major sections */
+    padding-bottom: 5px;
+    margin-top: 1.5em !important;
+    margin-bottom: 0.8em !important;
+}
+h3 {
+    font-size: 14pt !important;
+    margin-bottom: 0.5em !important;
+}
+p, li {
+    font-size: 11pt !important;
+    margin-bottom: 0.5em !important;
+}
+a {
+    color: #0000EE !important; /* Make links distinctly blue and underlined */
+    text-decoration: underline !important;
+}
+
+
+/* Layout Adjustments for Print */
+.hero-section {
+    background-color: transparent !important; /* No background color */
+    color: #000 !important;
+    padding: 0 !important; /* Remove padding */
+    text-align: left !important; /* Align left */
+    border-bottom: 1px solid #CCC; /* A subtle line under the header */
+    margin-bottom: 1.5cm; /* Space before first content section */
+}
+.hero-content {
+    flex-direction: row !important; /* Layout name/contact info horizontally */
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    max-width: none !important; /* Remove max-width constraint */
+    gap: 0 !important;
+    margin: 0 !important;
+}
+.hero-section .tagline {
+    font-size: 12pt !important;
+    margin-bottom: 1em !important;
+    opacity: 1 !important;
+}
+.contact-info {
+    flex-direction: column !important; /* Stack contact details */
+    align-items: flex-end !important; /* Align to the right */
+    gap: 0.3em !important;
+}
+.contact-info a, .contact-info .location {
+    color: #333 !important;
+    font-size: 10pt !important;
+    opacity: 1 !important;
+    gap: 0.3em !important;
+}
+
+.main-content-wrapper {
+    max-width: none !important; /* Remove max-width for print */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.content-block {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 1em !important;
+}
+
+/* Specific Grid Adjustments for Print (revert to block flow) */
+.skills-grid, .portfolio-grid {
+    display: block !important; /* Revert to standard block display */
+    margin-top: 0.5rem !important;
+    gap: 0 !important; /* Remove gaps */
+}
+.skill-category, .portfolio-item {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 0.5rem !important;
+}
+.skill-category ul {
+    list-style: none !important; /* Ensure no bullets initially */
+    padding-left: 1em !important; /* Indent for clarity */
+    display: block !important;
+}
+.skill-category li {
+    font-size: 10pt !important;
+    margin-bottom: 0.2em !important;
+    border-bottom: none !important;
+    display: list-item !important; /* Ensure list items behave as such */
+}
+
+.portfolio-item {
+    border-bottom: 1px dashed #CCC; /* Separator for portfolio items */
+    padding-bottom: 0.8rem;
+}
+.portfolio-item:last-child {
+    border-bottom: none;
+}
+.portfolio-item h4 {
+    font-size: 13pt !important;
+    margin-bottom: 0.2em !important;
+    color: #333 !important;
+}
+.portfolio-item p {
+    font-size: 10pt !important;
+    margin-bottom: 0.5em !important;
+    opacity: 1 !important;
+}
+.portfolio-item .portfolio-link {
+    text-decoration: underline !important;
+}
+
+/* Footer for Print */
+.site-footer {
+    background-color: transparent !important;
+    color: #555 !important;
+    margin-top: 1.5cm !important;
+    text-align: center !important;
+    padding: 0.5cm 0 !important;
+    border-top: 1px solid #CCC !important;
+    border-radius: 0 !important;
+}
+.site-footer p {
+    font-size: 9pt !important;
+    margin-bottom: 0 !important;
+    opacity: 1 !important;
+}
+
+/* Page Break Control */
+/* These properties advise the browser on how to handle page breaks. */
+.experience-section, .skills-section, .portfolio-section, .contact-section {
+    page-break-inside: avoid; /* Try to keep the entire section on one page */
+    page-break-after: auto; /* Allow a page break after the section */
+}
+
+.timeline-entry {
+    page-break-inside: avoid; /* Try to keep individual timeline entries together */
+}

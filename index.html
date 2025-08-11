@@ -1,57 +1,614 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Print-Perfect Resume & Dynamic Portfolio</title>
-    <!-- Favicon (optional but professional) -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- Primary Stylesheet for Screen -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Print Specific Stylesheet -->
-    <link rel="stylesheet" href="css/print.css" media="print">
-    <!-- Google Fonts CDN (example, replace with your chosen fonts) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <!-- Font Awesome CDN for Icons (optional, or use inline SVGs) -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Print-Perfect Resume & Dynamic Portfolio</title>
+
+    <!-- Favicon - A small icon that appears in the browser tab -->
+
+    <link rel="icon" href="https://placehold.co/32x32/000000/FFFFFF?text=JD" type="image/x-icon">
+
+  
+
+    <!-- Primary Stylesheet for Screen Display -->
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Print Specific Stylesheet - Applied only when printing -->
+
+    <link rel="stylesheet" href="css/print.css" media="print">
+
+  
+
+    <!-- Google Fonts CDN - Replace with your chosen fonts -->
+
+    <!-- Inter for body text and Montserrat for headings, offering a clean, modern look -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  
+
+    <!-- Font Awesome CDN for Icons - For contact info and timeline arrows. Optional, can use inline SVGs. -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+
 <body>
-    <header class="hero-section">
-        <!-- Main introduction: Name, Title, Contact Info -->
-    </header>
 
-    <main>
-        <section id="about" class="about-section">
-            <!-- About Me content -->
-        </section>
+    <!-- Header Section: Hero Introduction -->
 
-        <section id="experience" class="experience-section">
-            <!-- Experience timeline -->
-        </section>
+    <header class="hero-section">
 
-        <section id="skills" class="skills-section">
-            <!-- Skills section with categories -->
-        </section>
+        <div class="hero-content">
 
-        <section id="portfolio" class="portfolio-section">
-            <!-- Portfolio gallery -->
-        </section>
+            <img src="https://placehold.co/150x150/A3E4D7/212F3C?text=JD" alt="Jane Doe Profile Picture" class="profile-pic">
 
-        <section id="contact" class="contact-section">
-            <!-- Contact form / info -->
-        </section>
-    </main>
+            <h1>Jane Doe</h1>
 
-    <footer>
-        <!-- Copyright and additional links -->
-    </footer>
+            <p class="tagline">Senior Full-Stack Developer | Innovator | Problem Solver</p>
 
-    <!-- CSS-only lightbox/modal placeholder (will be hidden by default) -->
-    <div id="portfolio-modal" class="modal-overlay">
-        <a href="#" class="modal-close">&times;</a>
-        <div class="modal-content">
-            <!-- Content for selected portfolio item -->
-        </div>
-    </div>
+            <div class="contact-info">
+
+                <a href="mailto:jane.doe@example.com"><i class="fas fa-envelope"></i> jane.doe@example.com</a>
+
+                <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 (234) 567-890</a>
+
+                <a href="https://linkedin.com/in/janedoe" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+
+                <a href="https://github.com/janedoe" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+
+                <span class="location"><i class="fas fa-map-marker-alt"></i> New York, USA</span>
+
+            </div>
+
+            <!-- Navigation links (optional, for longer pages) -->
+
+            <nav class="main-nav">
+
+                <ul>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="#experience">Experience</a></li>
+
+                    <li><a href="#skills">Skills</a></li>
+
+                    <li><a href="#portfolio">Portfolio</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+  
+
+    <!-- Main Content Area -->
+
+    <main class="main-content-wrapper">
+
+        <!-- About Me Section -->
+
+        <section id="about" class="about-section content-block">
+
+            <h2>About Me</h2>
+
+            <p>
+
+                As a seasoned Full-Stack Developer with over 10 years of experience, I specialize in crafting robust, scalable, and intuitive web applications. My expertise lies in front-end development using modern HTML, CSS, and advanced JavaScript frameworks, complemented by strong back-end skills in Node.js and Python. I thrive in dynamic environments, consistently delivering high-quality solutions that exceed client expectations and contribute to business growth. I am passionate about clean code, performance optimization, and creating exceptional user experiences.
+
+            </p>
+
+            <p>
+
+                My journey in technology has been driven by a relentless curiosity and a commitment to continuous learning. I enjoy tackling complex challenges and transforming abstract ideas into functional, elegant software.
+
+            </p>
+
+        </section>
+
+  
+
+        <!-- Experience & Timeline Section -->
+
+        <section id="experience" class="experience-section content-block">
+
+            <h2>Experience</h2>
+
+            <div class="timeline">
+
+                <!-- Timeline Entry 1 -->
+
+                <article class="timeline-entry">
+
+                    <h3>Senior Web Architect <span class="company">@ Innovate Solutions</span></h3>
+
+                    <p class="date">Jan 2022 - Present</p>
+
+                    <!-- Checkbox for CSS-only expand/collapse functionality -->
+
+                    <input type="checkbox" id="exp1-toggle" class="timeline-toggle" hidden>
+
+                    <label for="exp1-toggle" class="timeline-label">
+
+                        Show Details <i class="fas fa-chevron-down toggle-icon"></i>
+
+                    </label>
+
+                    <div class="timeline-details">
+
+                        <ul>
+
+                            <li>Led the architectural design and development of next-generation web platforms.</li>
+
+                            <li>Mentored junior developers, fostering a collaborative and high-performing team.</li>
+
+                            <li>Implemented advanced CSS animations and transitions for an improved UX on critical applications.</li>
+
+                            <li>Optimized application performance, reducing load times by 25% through efficient asset delivery.</li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+  
+
+                <!-- Timeline Entry 2 -->
+
+                <article class="timeline-entry">
+
+                    <h3>Full-Stack Developer <span class="company">@ Global Tech Co.</span></h3>
+
+                    <p class="date">May 2018 - Dec 2021</p>
+
+                    <input type="checkbox" id="exp2-toggle" class="timeline-toggle" hidden>
+
+                    <label for="exp2-toggle" class="timeline-label">
+
+                        Show Details <i class="fas fa-chevron-down toggle-icon"></i>
+
+                    </label>
+
+                    <div class="timeline-details">
+
+                        <ul>
+
+                            <li>Developed and maintained full-stack applications using React, Node.js, and PostgreSQL.</li>
+
+                            <li>Collaborated with design teams to translate UI/UX wireframes into responsive web interfaces.</li>
+
+                            <li>Engineered RESTful APIs to support various client-side functionalities.</li>
+
+                            <li>Contributed to a significant codebase migration, enhancing system reliability and scalability.</li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+  
+
+                <!-- Timeline Entry 3 -->
+
+                <article class="timeline-entry">
+
+                    <h3>Junior Web Developer <span class="company">@ Startup Hub</span></h3>
+
+                    <p class="date">Aug 2016 - Apr 2018</p>
+
+                    <input type="checkbox" id="exp3-toggle" class="timeline-toggle" hidden>
+
+                    <label for="exp3-toggle" class="timeline-label">
+
+                        Show Details <i class="fas fa-chevron-down toggle-icon"></i>
+
+                    </label>
+
+                    <div class="timeline-details">
+
+                        <ul>
+
+                            <li>Assisted in front-end development, focusing on HTML5, CSS3, and basic JavaScript.</li>
+
+                            <li>Participated in daily stand-ups and sprint planning sessions.</li>
+
+                            <li>Debugged and resolved front-end issues, improving user experience.</li>
+
+                            <li>Learned best practices for responsive web design and cross-browser compatibility.</li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+  
+
+        <!-- Skills Section -->
+
+        <section id="skills" class="skills-section content-block">
+
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-category">
+
+                    <h3>Front-End</h3>
+
+                    <ul>
+
+                        <li><i class="fab fa-html5"></i> HTML5</li>
+
+                        <li><i class="fab fa-css3-alt"></i> CSS3 (Flexbox, Grid, Animations)</li>
+
+                        <li><i class="fab fa-react"></i> React</li>
+
+                        <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
+
+                        <li><i class="fas fa-pencil-ruler"></i> Responsive Design</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="skill-category">
+
+                    <h3>Back-End</h3>
+
+                    <ul>
+
+                        <li><i class="fab fa-node-js"></i> Node.js</li>
+
+                        <li><i class="fab fa-python"></i> Python</li>
+
+                        <li><i class="fas fa-database"></i> SQL (PostgreSQL, MySQL)</li>
+
+                        <li><i class="fas fa-server"></i> RESTful APIs</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="skill-category">
+
+                    <h3>Tools & Practices</h3>
+
+                    <ul>
+
+                        <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
+
+                        <li><i class="fas fa-cloud"></i> AWS</li>
+
+                        <li><i class="fas fa-cogs"></i> CI/CD</li>
+
+                        <li><i class="fas fa-bug"></i> Debugging</li>
+
+                        <li><i class="fas fa-project-diagram"></i> Agile Methodologies</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+  
+
+        <!-- Portfolio Section -->
+
+        <section id="portfolio" class="portfolio-section content-block">
+
+            <h2>Portfolio</h2>
+
+            <div class="portfolio-grid">
+
+                <!-- Portfolio Item 1 (using :target for lightbox effect) -->
+
+                <article class="portfolio-item">
+
+                    <a href="#portfolio-modal-ecommerce" class="portfolio-link">
+
+                        <img src="https://placehold.co/400x300/F5CBA7/2C3E50?text=E-commerce+Site" alt="E-commerce Website Redesign Thumbnail">
+
+                        <div class="item-overlay">
+
+                            <h4>E-commerce Redesign</h4>
+
+                            <p>Advanced CSS grid & custom animations for product pages.</p>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+                <!-- Lightbox content for E-commerce Project -->
+
+                <div id="portfolio-modal-ecommerce" class="portfolio-modal">
+
+                    <div class="modal-dialog">
+
+                        <!-- The target of this link (#_) makes the modal disappear by changing URL hash -->
+
+                        <a href="#_" class="modal-close-button">&times;</a>
+
+                        <div class="modal-content-inner">
+
+                            <img src="https://placehold.co/800x600/F5CBA7/2C3E50?text=E-commerce+Full+View" alt="Full view of E-commerce Website">
+
+                            <h3>E-commerce Redesign Project</h3>
+
+                            <p>A comprehensive redesign of an online store, focusing on responsive layouts, CSS-only product carousels, and interactive filtering without JavaScript.</p>
+
+                            <ul>
+
+                                <li>**Technologies:** HTML5, CSS3 (Grid, Flexbox, Custom Properties, Animations)</li>
+
+                                <li>**Key Features:** Responsive product grid, hover-to-zoom images, pure CSS accordions for product details, animated "add to cart" buttons.</li>
+
+                                <li>**View Live:** <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+  
+
+                <!-- Portfolio Item 2 -->
+
+                <article class="portfolio-item">
+
+                    <a href="#portfolio-modal-dashboard" class="portfolio-link">
+
+                        <img src="https://placehold.co/400x300/AED6F1/2C3E50?text=Dashboard+UI" alt="Dashboard UI Concept Thumbnail">
+
+                        <div class="item-overlay">
+
+                            <h4>Dashboard UI Concept</h4>
+
+                            <p>CSS Grid & Flexbox for complex, responsive admin interfaces.</p>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+                <div id="portfolio-modal-dashboard" class="portfolio-modal">
+
+                    <div class="modal-dialog">
+
+                        <a href="#_" class="modal-close-button">&times;</a>
+
+                        <div class="modal-content-inner">
+
+                            <img src="https://placehold.co/800x600/AED6F1/2C3E50?text=Dashboard+Full+View" alt="Full view of Dashboard UI Concept">
+
+                            <h3>Advanced Dashboard UI Concept</h3>
+
+                            <p>A completely responsive admin dashboard built using pure CSS Grid and Flexbox for complex layouts, including dynamic sidebar navigation and customizable widgets.</p>
+
+                            <ul>
+
+                                <li>**Technologies:** HTML5, CSS3 (Grid, Flexbox, Custom Properties, `var()`, `@media`)</li>
+
+                                <li>**Key Features:** Responsive side navigation, data visualization placeholders, theme switching (dark/light mode via CSS variables and checkbox hack).</li>
+
+                                <li>**View Live:** <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+  
+
+                <!-- Portfolio Item 3 -->
+
+                <article class="portfolio-item">
+
+                    <a href="#portfolio-modal-magazine" class="portfolio-link">
+
+                        <img src="https://placehold.co/400x300/D7BDE2/2C3E50?text=Digital+Magazine" alt="Digital Magazine Layout Thumbnail">
+
+                        <div class="item-overlay">
+
+                            <h4>Digital Magazine Layout</h4>
+
+                            <p>Multi-column layouts & CSS page-turn animations.</p>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+                <div id="portfolio-modal-magazine" class="portfolio-modal">
+
+                    <div class="modal-dialog">
+
+                        <a href="#" class="modal-close-button">&times;</a>
+
+                        <div class="modal-content-inner">
+
+                            <img src="https://placehold.co/800x600/D7BDE2/2C3E50?text=Magazine+Full+View" alt="Full view of Digital Magazine Layout">
+
+                            <h3>Interactive Digital Magazine Layout</h3>
+
+                            <p>An innovative digital magazine concept showcasing multi-column layouts, custom typography, and CSS-only page-turning animations, optimized for both screen and print.</p>
+
+                            <ul>
+
+                                <li>Technologies: HTML5, CSS3 (Multi-column layout, transform, perspective, @keyframes)</li>
+
+                                <li>Key Features: Fluid content flow, custom scroll effects, interactive articles, print-optimized version using @media print.</li>
+
+                                <li>View Live: <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+  
+
+                <!-- Portfolio Item 4 -->
+
+                <article class="portfolio-item">
+
+                    <a href="#portfolio-modal-artgallery" class="portfolio-link">
+
+                        <img src="https://placehold.co/400x300/FADBD8/2C3E50?text=CSS+Art+Gallery" alt="CSS Art Gallery Thumbnail">
+
+                        <div class="item-overlay">
+
+                            <h4>CSS Art Gallery</h4>
+
+                            <p>Pure CSS illustrations & creative use of shapes.</p>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+                <div id="portfolio-modal-artgallery" class="portfolio-modal">
+
+                    <div class="modal-dialog">
+
+                        <a href="#" class="modal-close-button">&times;</a>
+
+                        <div class="modal-content-inner">
+
+                            <img src="https://placehold.co/800x600/FADBD8/2C3E50?text=Art+Full+View" alt="Full view of CSS Art Gallery">
+
+                            <h3>Custom CSS Art & Illustration Gallery</h3>
+
+                            <p>A gallery showcasing a collection of vector-style illustrations created entirely with HTML and CSS, pushing the boundaries of shapes, gradients, and pseudo-elements.</p>
+
+                            <ul>
+
+                                <li>Technologies: HTML5, CSS3 (clip-path, border-radius, box-shadow, gradients, ::before, ::after)</li>
+
+                                <li>Key Features: Complex geometric shapes, creative use of filters, subtle animations, demonstrating mastery of CSS drawing techniques.</li>
+
+                                <li>View Live: <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+  
+
+            </div>
+
+        </section>
+
+  
+
+        <!-- Contact Section -->
+
+        <section id="contact" class="contact-section content-block">
+
+            <h2>Contact Me</h2>
+
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+
+            <form class="contact-form" action="#" method="POST">
+
+                <div class="form-group">
+
+                    <label for="name">Name</label>
+
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="email">Email</label>
+
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="subject">Subject</label>
+
+                    <input type="text" id="subject" name="subject" required placeholder="Project Inquiry, Collaboration, etc.">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="message">Message</label>
+
+                    <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+
+                </div>
+
+                <button type="submit" class="submit-button">Send Message</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+  
+
+    <!-- Footer Section -->
+
+    <footer class="site-footer">
+
+        <p>&copy; 2025 Jane Doe. All rights reserved. Built with HTML5 & CSS3.</p>
+
+        <div class="footer-links">
+
+            <a href="https://linkedin.com/in/janedoe" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+
+            <a href="https://github.com/janedoe" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+
+            <a href="mailto:jane.doe@example.com" aria-label="Email Jane Doe"><i class="fas fa-envelope"></i></a>
+
+        </div>
+
+    </footer>
+
 </body>
 </html>
